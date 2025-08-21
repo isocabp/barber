@@ -5,6 +5,7 @@ import { ChevronLeftIcon, MenuIcon, MapPinIcon, StarIcon } from "lucide-react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import ServiceItem from "@/app/_components/service-item"
+import PhoneItem from "@/app/_components/phone-item"
 
 interface BarberShopPageProps {
   params: {
@@ -82,6 +83,12 @@ const BarberShopPage = async ({ params }: BarberShopPageProps) => {
             <ServiceItem key={service.id} service={service} />
           ))}
         </div>
+      </div>
+      {/* CONTATO */}
+      <div className="space-y-3 p-5">
+        {barbershop.phones.map((phone) => (
+          <PhoneItem key={phone} phone={phone} />
+        ))}
       </div>
     </div>
   )
