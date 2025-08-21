@@ -18,7 +18,7 @@ const BarbershopItem = ({ barbershop }: BarbershopItemProps) => {
           <Image
             alt={barbershop.name}
             fill
-            className="overflow-auto rounded-2xl object-cover [&::webkit-scrollbar]:hidden"
+            className="rounded-2xl object-cover"
             src={barbershop.imageUrl}
           />
 
